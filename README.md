@@ -1,15 +1,23 @@
 # ♟️ Lichess Logic Bot
-This is an automated chess bot that plays on Lichess using the official Bot API.
+[![Python Version](https://img.shields.io/badge/python-3.13-blue.svg)](https://python.org)
+[![Lichess Bot](https://img.shields.io/badge/Lichess-Bot--Profile-orange.svg)](https://lichess.org/@/Royal-Bot)
+[![Engine](https://img.shields.io/badge/Engine-Stockfish-green.svg)](https://stockfishchess.org/)
+
+An automated chess intelligence that leverages the **Lichess Bot API** and **Stockfish** engine to compete in real-time global matches.
 
 ## 🚀 How it Works
-1. **Listen:** It connects to the Lichess stream to wait for a game.
-2. **Think:** When an opponent moves, it sends the board to an engine (like Stockfish).
-3. **Move:** It sends the best move back to the board automatically.
+1. **The Listener:** Connects to the Lichess event stream using an asynchronous `ndjson` stream to detect new challenges and game starts.
+2. **The Brain:** Upon opponent move detection, the current board state (FEN) is processed by the **Stockfish Engine** to determine the optimal move.
+3. **The Execution:** Automatically transmits the calculated move back to the Lichess API with zero human intervention.
 
-## 🛠️ Built With
-* Python / JavaScript (Delete the one you didn't use)
-* Lichess API
-* Stockfish Engine
+## 🏗️ Tech Stack
+* **Python 3.13:** Asynchronous event-loop architecture.
+* **Lichess API:** REST and Stream integration for bot account management.
+* **Stockfish 16:** High-performance UCI engine for move calculation.
 
-## 📈 Live Bot
-Check out my bot's profile here: (https://lichess.org/@/Royal-Bot)
+## 📉 Live Bot Status
+You can challenge the bot or watch it play live here:
+👉 **[Royal-Bot on Lichess](https://lichess.org/@/Royal-Bot)**
+
+---
+*Created by [King-of-javascript](https://github.com/King-of-javascript)*
